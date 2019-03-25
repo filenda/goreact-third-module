@@ -5,13 +5,14 @@ import { Provider } from "react-redux";
  */
 import "./config/reactotron";
 import store from "./store";
-import TodoList from "./TodoList";
+
+import Routes from "./routes";
 
 const App = () => (
   // 'Provider' here passes all updated info about redux states (inside store)
   // to every component inside of it
   <Provider store={store}>
-    <TodoList />
+    <Routes />
   </Provider>
 );
 
