@@ -3,7 +3,7 @@
  * similar to redux's 'combine reducers'
  *  */
 import { all, takeLatest } from "redux-saga/effects";
-
+import { Types as FavoriteTypes } from "../ducks/favorites";
 import { addFavorite } from "./favorites";
 
 /**
@@ -22,5 +22,5 @@ export default function* rootSaga() {
    * 'takeEvery' is another option which would execute all user requested action
    * clicks */
 
-  yield all([takeLatest("ADD_FAVORITE_REQUEST", addFavorite)]);
+  yield all([takeLatest(FavoriteTypes.ADD_REQUEST, addFavorite)]);
 }

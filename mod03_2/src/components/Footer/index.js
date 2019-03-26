@@ -12,7 +12,7 @@ Footer.propTypes = {
 const mapStateToProps = state => ({
   //  you can and should use js functions inside of the mapping
   // to manipulate data - avoid using function inside of the render method
-  count: state.favorites.length
+  count: state.favorites.data.length
 });
 
 export default connect(mapStateToProps)(Footer);
